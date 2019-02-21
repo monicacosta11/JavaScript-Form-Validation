@@ -3,12 +3,21 @@
  <HEAD>
  <TITLE>Customer Information</TITLE>
  <link rel="stylesheet" type="text/css" href="style.css">
-
+<SCRIPT>
+<!-- This is JavaScript -->
+	function validateForm() {
+  var x = document.forms["myForm"]["firstname"].value;
+  if (x == "") {
+    alert("First name must be filled out");
+    return false;
+  }
+}
+</SCRIPT>
  </HEAD>
  <BODY>
-	<!-- This is a comment -->
 	<H1>Customer Information</H1>
-	<form name="myForm" onsubmit="return validateForm()" method="post">
+<!-- This is the form and line 21 validates the user input -->
+<form name="myForm" onsubmit="return validateForm()" method="post">
   First name:<br>
   <input type="text" name="firstname" value="">
   <br>
